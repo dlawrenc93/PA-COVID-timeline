@@ -286,9 +286,11 @@ const changeMap = (label) => {
     //sets tooltip with county name and covid numbers
     //and also event listeners (highlight, zoom to feature) for each county
     function onEachFeature(feature, layer) {
+        let pop = feature.properties.population;
         let county = feature.properties.county;
-        let countyCaseNum = time_array_maker(feature)[slider_index];
-        let countyTooltip = `<b>${county} County</b><br>${Math.floor(countyCaseNum)} cases / 100,000 people`;
+        let countyCaseNum = time_array_maker(feature)[slider_index][0];
+        let countyCaseNum100k = time_array_maker(feature)[slider_index][1];
+        let countyTooltip = `<b>${county} County</b><br>Population: ${pop}<br>Total Cases: ${countyCaseNum}<br>Cases / 100,000 people: ${Math.floor(countyCaseNum100k)}`;
         layer.bindTooltip(countyTooltip);
 
         layer.on({
@@ -300,17 +302,31 @@ const changeMap = (label) => {
     };
 
     //makes an array of one county's cumulative case numbers by month, to be used by other functions
-    const time_array_maker = feature => {
-        let months_cases_100k = [];
+    const time_array_maker = (feature) => {
+        let array = [];
 
         for (const month in feature.properties.time_series){
-            months_cases_100k.push(
-                feature.properties.time_series[month].cases_per_100k
+            array.push(
+                [feature.properties.time_series[month].cases, 
+                feature.properties.time_series[month].cases_per_100k]
                 );
             };
 
-        return months_cases_100k;
+        return array;
     };
+
+   /* const cases_array_maker = feature => {
+        let months_cases = [];
+
+        for (const month in feature.properties.time_series){
+            months_cases.push(
+                feature.properties.time_series[month].cases
+                );
+            };
+
+        return months_cases;
+    };
+*/
 
     //sets appearance of each county, including color based on COVID cases
     function countyStyle(feature) {
@@ -324,7 +340,7 @@ const changeMap = (label) => {
             color: '#383838',
             fillOpacity: 1,
             fillColor: getColor(
-                            caseMonths[slider_index], 
+                            caseMonths[slider_index][1], 
                             quantiles[slider_index]
                         )
         };
