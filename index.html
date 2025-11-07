@@ -1,223 +1,383 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>David Lawrence Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<head>
+    <meta charset=utf-8 />
+    <title>DL Final Project</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>David Lawrence</h1>
-						
-						<!-- <p>Description of me with a link to my <a href="https://github.com/dlawrenc93" target="_blank" >GitHub</a>.</p> -->
-						<!-- <p>Description of me</p> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Projects</a>
-					</header>
+    <!-- jQuery for leaflet.timeline-slider -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 
-				<!-- Nav -->
-					<!-- <nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav> -->
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<!--
-							<article class="post featured">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">And this is a<br />
-									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">View Project</a></li>
-								</ul>
-							</article>
-							-->
-
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="https://dlawrenc93.github.io/PA-COVID-timeline/" target="_blank">COVID Timeline<br />
-											Web Map</a></h2>
-									</header>
-									<a href="https://dlawrenc93.github.io/PA-COVID-timeline/" target="_blank" class="image fit"><img src="images/PA_covid_map_full.png" alt="" /></a>
-									<p>Using JavaScript, Leaflet, HTML, and Python, I created an interactive web map with a time slider, showing how cumulative COVID cases change month to month, from March 2020 to April 2021. </p>
-									<ul class="actions special">
-										<li><a href="https://dlawrenc93.github.io/PA-COVID-timeline/" class="button" target="_blank" >View Project</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="river_trail_map.html" >Reference Map:<br />
-											Lansing River Trail</a></h2>
-									</header>
-									<a href="river_trail_map.html" class="image fit"><img src="images/DLawrence_River_Trail_Map.png" alt="" /></a>
-									<p>Using QGIS, I created a static reference map of the Lansing River Trail, a recreational trail in Lansing, Michigan. </p>
-									<ul class="actions special">
-										<li><a href="river_trail_map.html" class="button" >View Project</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="crash_database.html">Spatial Database:<br />
-											Car Crashes in Pennsylvania</a></h2>
-									</header>
-									<a href="crash_database.html" class="image fit"><img src="images/crashes_all_vs_interstate.jpeg" alt="" /></a>
-									<p>Using PostgreSQL and PostGIS, I created a spatial database of car crashes in Pennsylvania. The full process included schema normalization, ETL, and executing spatial analytical queries. </p>
-									<ul class="actions special">
-										<li><a href="crash_database.html" class="button" >View Project</a></li>
-									</ul>
-								</article>
-
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="tree_canopy.html">Tree Canopy in Philadelphia</a></h2>
-									</header>
-									<a href="tree_canopy.html" class="image fit"><img src="images/tree_canopy_score.png" alt="" /></a>
-									<p> Using ArcGIS and R, I calculated an index of Tree Canopy Need consisting of 4 factors: (tree canopy, tree canopy change, land surface temperature, population density).</p>
-									<ul class="actions special">
-										<li><a href="tree_canopy.html" class="button" >View Project</a></li>
-									</ul>
-								</article>
+    <!-- loading timeline-slider plugin -->
+    <script src="leaflet-timeline-slider.min.js"></script>
 
 
-								<article>
-									<header>
-										<!-- <span class="date">April 24, 2017</span> -->
-										<h2><a href="food_access.html" >Walkable Food Access Map<br />
-											</a></h2>
-									</header>
-									<a href="food_access.html" class="image fit"><img src="images/food_access_map.png" alt="" /></a>
-									<p>An ArcGIS map of walkable food access, farmer's markets, and picnic sites in Philadelphia. </p>
-									<ul class="actions special">
-										<li><a href="food_access.html" class="button" >View Project</a></li>
-									</ul>
-								</article>
+    <!-- leaflet.timeline, not using this one
+      <script src="javascripts/leaflet.timeline.js"></script>
+        <script src="javascripts/moment.min.js"></script>  -->
 
-						<!-- Footer -->
-							<!-- <footer>
-								<div class="pagination">
-									<a href="#" class="previous">Prev</a>
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer> -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: whitesmoke;
+            font-family: Segoe UI, sans-serif;
+            color: #0D0000;
+        }
+        header {
+            padding: 2px 10%;
+        }
+        h1 {
+            display: inline-block;
+            margin-right: 20px;
+            color: #808080;
+            font-size: 1.5em;
+        }
+        h2 {
+            font-size: 0.9em;
+            color: #001323;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+            /*height:900px;*/
+            /*margin: 10px auto;*/
+            position: absolute ;
+            top: 0;
+            bottom: 0;
+        }
+       
+        footer {
+            padding: 6px 10%;
+            width: 80%;
+        }
+        p {
+            font-size: 2em;
+            font-family: Segoe UI, sans-serif;
+            color:#A8A8A8;
+            font-weight: 400;
+        }
+        .info { 
+            font-size: 14px;
+            padding: 5px 18px 18px 18px;
+            font-family: Segoe UI, sans-serif; 
+            /*background: #DCDCDC;*/ 
+            background: rgba(255,255,255,0.8); 
+            box-shadow: 0 0 15px rgba(0,0,0,0.2); 
+            border-radius: 5px; 
+        } 
+        .info h4 { 
+            padding: 2px 0px 0px 0px;  
+            margin: 0 0 0px; 
+            color: #444; 
+            font-weight: 500;
+            font-size: 1.2em; 
+            margin-bottom: 10px; 
+        }
+        .info h5 { 
+            /*padding: 18px 18px; */
+            /*margin: 0 0 5 0px; */
+            /*color: #777; */
+            font-weight: 500;
+            font-size: 14px;
+            /*font-size: 1.5em; */
+            margin: 0px 0px 10px 0px; 
+        }
+        .legend { 
+            text-align: left; 
+            /*font-weight: 450;*/
+            line-height: 30px; 
+            color: #555; 
+        } 
+        .legend i { 
+            width: 25px; 
+             height: 30px; 
+             float: left; 
+             margin-right: 10px; 
+             opacity: 1; 
+             box-shadow: 0 0 2px  
+        }
+        #title {
+            z-index: 9999;
+            margin: auto;
+            text-align: center;
+            width: 50%;
+            pointer-events: none;
+            position: relative;
+            top: -20px;
+            /*left: 50%;*/
+            color:#D0D0D0;
+        }
+    </style>
 
-					</div>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<!-- <section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section> -->
-						<section class="split contact">
-							<!-- <section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section> -->
-							<!-- <section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">dlawrenc93@gmail.com</a></p>
-							</section> -->
-							<!-- <section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section> -->
-						</section>
-					</footer>
+</head>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+<body>
+    <!-- <header>
+        <h1>Philadelphia Counties</h1>
+        <h2></h2>
+        <p></p>
+    </header> -->
+    
+    <div id='map'></div>
 
-			</div>
+     <div id='title'><p>PA COVID Density Timeline</p></div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+   <!--  <footer>
+        <p>David Lawrence</p>
+        <p></p>
+    </footer> -->
+
+    <script src="PaCounty2021_4326_joined_copy.geojson"></script>
+
+
+<script>
+
+var options = {
+    center: [40.77336622248113, -77.19713860126755], 
+    zoomSnap: 0.1,
+    zoom: 7.7,
+    zoomControl: false
+};    
+        
+      
+var map = L.map(
+    'map', 
+    options
+);
+              
+        
+var tiles = L.tileLayer(
+    //'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+    'https://{s}.basemaps.cartocdn.com/rastertiles/dark_nolabels/{z}/{x}/{y}{r}.png', 
+    {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 19
+    }
+).addTo(map);  
+      
+        
+
+let jason;  
+
+
+let quantiles = [];
+//populating an array of 14 quantiles to determine color gradations for each month
+for (const month in counties.quantiles){
+        //console.log(counties.quantiles[month].cases_per_100k)
+        //quantiles.push(month.cases_per_100k);
+        quantiles.push(counties.quantiles[month].cases_per_100k)
+};
+      
+//creating legend as extension of L.Control
+L.legend = L.Control.extend({   
+
+    'onAdd': function (map) {
+        map.legend = this;
+        //making a div tag for the legend
+        var div = L.DomUtil.create('div', 'info legend');
+            
+        //if (this.options.content) {
+        //    div.innerHTML = this.options.content;  
+        //}
+        return div;
+    },
+
+    /*'onRemove': function (map) {
+        delete map.legend;
+    },*/
+
+    //function to set the content of the legend window
+    'setContent': function(slider_index) {
+         this.getContainer().innerHTML = '<h5>COVID Cases / 100,000 people<br>(cumulative)</h5>Hover over a county to view<br>';
+            grades = quantiles[slider_index];
+            labels = ['<strong>COVID cases per 100,000 people (cumulative)</strong>'];
+        
+            //loop sets each grade line
+        for (let i = 0; i < (grades.length - 1); i++) {
+
+            let eachColor = getColor(grades[i] + 1, quantiles[slider_index]);
+            let eachLow = Math.floor(grades[i]);
+            let eachHigh = Math.floor(grades[i + 1]);
+            
+            this.getContainer().innerHTML += `<i style="background: ${eachColor} "></i>${eachLow} &ndash; ${eachHigh}<br>`;
+        }
+    }
+
+});
+
+//adding legend to the map
+map.addControl(new L.legend({
+    'position': 'topright',
+    'content': ''
+}));
+
+
+//determines the color gradations of the counties and legend
+function getColor(d, quantile) { 
+
+    console.log(quantile);
+
+    return d > quantile[5]  ? '#810f7c' 
+    : d > quantile[4]  ? '#8856a7' 
+    : d > quantile[3]   ? '#8c96c6' 
+    : d > quantile[2]   ? '#9ebcda' 
+    : d > quantile[1]   ? '#bfd3e6' 
+    : '#edf8fb';
+};
+
+
+//determines style changes when you hover over a county
+function highlightFeature(e) {
+    //e.target is whichever county is currently hovered
+    var layer = e.target; 
+
+    layer.setStyle({ 
+        weight: 4, 
+        color: 'white', 
+        dashArray: '',
+        fillOpacity: 0.7
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+            layer.bringToFront();
+    }
+
+    //console.log(label);
+};
+
+//resets the highlight when mouse out of county
+function resetHighlight(e) {
+    jason.resetStyle(e.target);
+    //info.update();//resets the hover control back to the default
+};
+
+//zooms to enlarge a county when you click on it
+function zoomToFeature(e) {
+    map.fitBounds(e.target.getBounds());
+};    
+
+
+
+
+
+     
+//big function that determines what the map does when the time slider is moved
+const changeMap = (label) => {
+
+    let slider_index = label.value - 1;
+    map.legend.setContent(slider_index);
+
+    //sets tooltip with county name and covid numbers
+    //and also event listeners (highlight, zoom to feature) for each county
+    function onEachFeature(feature, layer) {
+        let pop = feature.properties.population;
+        let county = feature.properties.county;
+        let countyCaseNum = time_array_maker(feature)[slider_index][0];
+        let countyCaseNum100k = time_array_maker(feature)[slider_index][1];
+        let countyTooltip = `<b>${county} County</b><br>Population: ${pop}<br>Total Cases: ${countyCaseNum}<br>Cases / 100,000 people: ${Math.floor(countyCaseNum100k)}`;
+        layer.bindTooltip(countyTooltip);
+
+        layer.on({
+            mouseover: highlightFeature,
+            mouseout: resetHighlight,
+            click: zoomToFeature
+        });
+
+    };
+
+    //makes an array of one county's cumulative case numbers by month, to be used by other functions
+    const time_array_maker = (feature) => {
+        let array = [];
+
+        for (const month in feature.properties.time_series){
+            array.push(
+                [feature.properties.time_series[month].cases, 
+                feature.properties.time_series[month].cases_per_100k]
+                );
+            };
+
+        return array;
+    };
+
+   /* const cases_array_maker = feature => {
+        let months_cases = [];
+
+        for (const month in feature.properties.time_series){
+            months_cases.push(
+                feature.properties.time_series[month].cases
+                );
+            };
+
+        return months_cases;
+    };
+*/
+
+    //sets appearance of each county, including color based on COVID cases
+    function countyStyle(feature) {
+        let caseMonths = time_array_maker(feature);
+        let whichQuantile = quantiles[slider_index];
+
+        return {
+            //dashArray: '3',
+            weight: 1.5,
+            opacity: 1,
+            color: '#383838',
+            fillOpacity: 1,
+            fillColor: getColor(
+                            caseMonths[slider_index][1], 
+                            quantiles[slider_index]
+                        )
+        };
+    };
+   
+
+    jason = L.geoJson(
+        counties, {
+            style: countyStyle,
+            onEachFeature : onEachFeature 
+        }
+    )
+    .addTo(map)
+        
+
+};
+
+
+L.control.timelineSlider({
+    changeMap: changeMap,
+    position: "bottomleft",
+    backgroundOpacity: 0.85,
+    timelineItems: ["03/2020", "04/2020", "05/2020", "06/2020", "07/2020", "08/2020",
+                "09/2020", "10/2020", "11/2020", "12/2020", "01/2021", "02/2021",
+                "03/2021", "04/2021"]
+})
+.addTo(map);
+        
+
+map.attributionControl.addAttribution(
+    'Data Sources: <a href="https://github.com/nytimes/covid-19-data/blob/master/us-counties.csv">NY Times</a>,\
+    <a href="https://data.pa.gov/Health/COVID-19-Aggregate-Cases-Current-Daily-County-Heal/j72v-r42c">PA Dept. of Health</a>,\
+    <a href="https://www.pasda.psu.edu/uci/DataSummary.aspx?dataset=24">PASDA</a>. COVID Data accurate as of 04/19/2021');     
+        
+
+    </script>
+    
+</body>
+
 </html>
